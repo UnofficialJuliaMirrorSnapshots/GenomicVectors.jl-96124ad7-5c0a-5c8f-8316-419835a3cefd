@@ -1,5 +1,5 @@
-using GenomicVectors
 using GenomicFeatures
+using GenomicVectors
 using BioAlignments
 using DataFrames
 using CSV
@@ -60,8 +60,7 @@ end
 
 bdf = vcat(bdf,timings)
 
-CSV.write( "/Users/phaverty/.julia/dev/GenomicVectors/benchmark/timings.csv",
-             bdf, header=true)
+CSV.write( "/Users/phaverty/.julia/dev/GenomicVectors/benchmark/timings.csv", bdf)
 
 jdf = timings
 rdf = bdf[ bdf[:language] .== "R",:];
